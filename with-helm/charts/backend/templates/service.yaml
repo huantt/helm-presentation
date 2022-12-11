@@ -1,0 +1,19 @@
+{{- if $.Values.service }}
+  {{- $fullname := $.Values.name}}
+  {{- with $.Values.service }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $fullname }}
+  namespace: {{ $.Values.namespace }}
+  labels:
+    app: {{ $fullname }}
+spec:
+  type: LoadBalancer
+  ports:
+    - port: {{ .port }}
+      targetPort: http
+  selector:
+    app: {{ $fullname }}
+  {{- end }}
+{{- end }}

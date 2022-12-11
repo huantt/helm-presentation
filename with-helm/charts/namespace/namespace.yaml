@@ -1,0 +1,8 @@
+{{- with namespace }}
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{ name }}
+  labels:
+    name: {{ name}}
+{{- end }}

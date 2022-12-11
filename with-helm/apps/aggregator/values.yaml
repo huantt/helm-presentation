@@ -1,0 +1,12 @@
+---
+backend:
+  namespace: aggregator
+  name: rest-service
+
+  deployment:
+    image: kornkitti/express-hello-world:latest
+    replicas: 1
+
+  service:
+    port: 3008
+    targetPort: 8080

@@ -1,0 +1,6 @@
+.idea/
+build/
+*.tgz
+Chart.lock
+preview.*
+.DS_Store
