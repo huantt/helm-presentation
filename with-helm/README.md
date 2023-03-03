@@ -1,3 +1,9 @@
+## Flow:
+- Create helm chart (your application) that use other dependencies 
+- Build dependencies
+- Try rendering 
+- Install chart (deploy application)
+- Upgrade chart (upgrade application)
 ## Create new helm chart
 ```shell
 helm create {NAME} [flags]
